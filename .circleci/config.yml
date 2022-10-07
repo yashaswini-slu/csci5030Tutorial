@@ -1,2 +1,8 @@
 # Configuration file
 version:1.0
+jobs:
+	build:
+		machine:
+		image: ubuntu-2005:202010-01
+		steps:
+			echo Hello
