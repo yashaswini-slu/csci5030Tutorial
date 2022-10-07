@@ -1,8 +1,14 @@
 # Configuration file
-version:1.0
+version:2.1
 jobs:
-	build:
+	my-test:
 		machine:
-		image: ubuntu-2005:202010-01
+			image: ubuntu-2005:202010-01
 		steps:
-			echo Hello
+			-run:			
+				name: "Hello"
+				command: "echo Hello"
+workflow:
+	hello-workflow:
+	jobs:
+		-my-test
